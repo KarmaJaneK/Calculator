@@ -40,3 +40,16 @@ const operate = function(operator, a, b){
         case '/':
         return divide(a,b);
         }};
+
+    let displayValue = '';
+
+    const display = function(value){
+        displayValue = value;
+        document.querySelector('.display').innerText = displayValue;//show the value on the display
+     
+    }
+    document.querySelectorAll('button').forEach(button => { //add event listener to all buttons
+        button.addEventListener('click',() => {
+            display(button.innerText);
+        });
+    });
