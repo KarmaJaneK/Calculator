@@ -9,5 +9,7 @@ const subtract = function(a,b){
 };
 
 //multiply
-
+const multiply = function(a,b){
+    return a * b;
+};
 //divide
