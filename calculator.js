@@ -46,7 +46,7 @@ const operate = function(operator, a, b){
 
     const display = function(value){
         displayValue = value;
-        document.querySelector('.display').innerText = displayValue;//show the value on the display
+        document.querySelector('.Display').innerText = displayValue;//show the value on the display
      
     }
     document.querySelectorAll('button').forEach(button => { //add event listener to all buttons
