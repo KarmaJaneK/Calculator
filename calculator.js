@@ -125,4 +125,4 @@ document.querySelectorAll("button").forEach((button) => {
   });
 });
 
-//if there is a firstNumber, operator and secondNumber, if another operator is clicked, calculate the result and display it
+//add keyboard support
