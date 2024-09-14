@@ -69,10 +69,7 @@ document.querySelectorAll("button").forEach((button) => {
 
     } else if (value === "C") {
         //if the value is the clear button
-      displayValue = '';
-      firstNumber = '';
-      operator = '';
-      secondNumber = '';
+      display(""); //clear the display
 
     } else if (
       value === "+" ||
@@ -84,7 +81,11 @@ document.querySelectorAll("button").forEach((button) => {
       operator = value;
     } else if (value === "=") {
       //if the value is the equal button
-      display(operate(operator, firstNumber, secondNumber)); //update the display with the result
-    }
+        if (firstNumber === "" || firstNumber === null || firstNumber === undefined) {
+       document.querySelector('.display').innerText = '0'; // show the value on the display
+
+      } else {
+         display(operate(operator, firstNumber, secondNumber)); //update the display with the result
+    }};
   });
 });
