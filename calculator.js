@@ -32,16 +32,16 @@ const operate = function (operator, a, b) {
   b = Number(b); //convert the strings to numbers
   switch (operator) {
     case "+":
-      return sum(a, b);
+      return Math.round(sum(a, b) * 100) / 100; //round the result to 2 decimal places
 
     case "-":
-      return subtract(a, b);
+      return Math.round(subtract(a, b) * 100) / 100;
 
     case "*":
-      return multiply(a, b);
+      return Math.round(multiply(a, b) * 100) / 100;
 
     case "/":
-      return divide(a, b);
+      return Math.round(divide(a, b) * 100) / 100;
   }
 };
 
@@ -85,7 +85,7 @@ document.querySelectorAll("button").forEach((button) => {
         } else {
             operator = value; 
         };
-        
+
     } else if (value === "=") {
       //if the value is the equal button
 
