@@ -99,9 +99,22 @@ document.querySelectorAll("button").forEach((button) => {
         } else {
             firstNumber = firstNumber.slice(0, -1); //remove the last character from the first number
             display(firstNumber); //update the display
-        };
+        }};
 
-    } else if (value === "=") {
+        if (value === ".") { //if the value is the decimal point
+            if (operator === "") {
+                if (!firstNumber.includes(".")) {
+                    firstNumber += "."; //if the operator is empty and the first number does not contain a decimal point, add a decimal point
+                    display(firstNumber); //update the display
+                }
+            } else {
+                if (!secondNumber.includes(".")) {
+                    secondNumber += "."; //if the operator is not empty and the second number does not contain a decimal point, add a decimal point
+                    display(secondNumber); //update the display
+                };
+            };
+
+    } if (value === "=") {
       //if the value is the equal button
 
       //if firstNumber is empty, display 0
