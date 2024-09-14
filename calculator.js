@@ -69,14 +69,23 @@ document.querySelectorAll("button").forEach((button) => {
     } else if (value === "C") {
       //if the value is the clear button
       display(""); //clear the display
-    } else if (
+    } else if ( //if the value is an operator
       value === "+" ||
       value === "-" ||
       value === "*" ||
       value === "/"
-    ) {
-      //if the value is an operator
-      operator = value;
+    ) { if (operator === ""){
+        operator = value; //if the operator is empty, the value is the operator
+    } else if (operator !== "" && firstNumber !== "" && secondNumber !== "") {
+        //if the operator is not empty and the first and second number are not empty, calculate the result
+        display(operate(operator, firstNumber, secondNumber));
+        firstNumber = displayValue; //store the result in the first number
+        secondNumber = ""; //clear the second number
+        operator = value; //store the new operator
+        } else {
+            operator = value; 
+        };
+        
     } else if (value === "=") {
       //if the value is the equal button
 
@@ -112,3 +121,5 @@ document.querySelectorAll("button").forEach((button) => {
     }
   });
 });
+
+//if there is a firstNumber, operator and secondNumber, if another operator is clicked, calculate the result and display it
