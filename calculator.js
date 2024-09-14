@@ -28,6 +28,8 @@ let secondNumber = '';
 
 // takes an operator and 2 numbers and then calls one of the above functions on the numbers.
 const operate = function (operator, a, b) {
+    a = Number(a);
+    b = Number(b);//convert the strings to numbers
   switch (operator) {
     case "+":
       return sum(a, b);
