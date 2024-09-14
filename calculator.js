@@ -22,9 +22,9 @@ const divide = function (a, b) {
 };
 //store the first and second number and the operator
 
-let firstNumber = 0;
-let operator = "";
-let secondNumber = 0;
+let firstNumber = '';
+let operator = '';
+let secondNumber = '';
 
 // takes an operator and 2 numbers and then calls one of the above functions on the numbers.
 const operate = function (operator, a, b) {
@@ -43,11 +43,11 @@ const operate = function (operator, a, b) {
   }
 };
 
-let displayValue = "";
+let displayValue = '';
 
-const display = function (value) {
-  displayValue = value;
-  document.querySelector(".display").innerText = displayValue; //show the value on the display
+const display = function(value) {
+    displayValue = value;
+    document.querySelector('.display').innerText = displayValue; // show the value on the display
 };
 document.querySelectorAll("button").forEach((button) => {
   //add event listener to all buttons
@@ -64,8 +64,14 @@ document.querySelectorAll("button").forEach((button) => {
         secondNumber += value; //if the operator is not empty, the value is the second number
         display(secondNumber);
       }
+
     } else if (value === "C") {
-      display(""); //clear the display
+        //if the value is the clear button
+      displayValue = '';
+      firstNumber = '';
+      operator = '';
+      secondNumber = '';
+
     } else if (
       value === "+" ||
       value === "-" ||
@@ -74,7 +80,7 @@ document.querySelectorAll("button").forEach((button) => {
     ) {
       //if the value is an operator
       operator = value;
-    } else if (value === ".Equal") {
+    } else if (value === "=") {
       //if the value is the equal button
       display(operate(operator, firstNumber, secondNumber)); //update the display with the result
     }
