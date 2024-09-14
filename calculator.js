@@ -87,6 +87,18 @@ document.querySelectorAll("button").forEach((button) => {
         operator = value; //store the new operator
         } else {
             operator = value; 
+        }};
+        
+    if (value === "Undo"){  //if the value is the backspace button
+        if (secondNumber !== "") {
+            secondNumber = secondNumber.slice(0, -1); //remove the last character from the second number
+            display(secondNumber); //update the display
+        } else if (operator !== "") {
+            operator = ""; //if the operator is not empty, clear the operator
+            display(firstNumber); //update the display
+        } else {
+            firstNumber = firstNumber.slice(0, -1); //remove the last character from the first number
+            display(firstNumber); //update the display
         };
 
     } else if (value === "=") {
