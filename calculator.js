@@ -18,7 +18,10 @@ const multiply = function (a, b) {
 //divide
 
 const divide = function (a, b) {
-  return a / b;
+    if (b === 0) {
+        return "Error: Cannot Divide by O";}
+        else{
+  return a / b;}
 };
 //store the first and second number and the operator
 
