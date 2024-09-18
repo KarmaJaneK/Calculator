@@ -148,6 +148,10 @@ document.querySelectorAll("button").forEach((button) => {
       }
     }
   });
-});
+  //function to switch the theme
+  
+  }
+  );
+
 
 //add keyboard support
