@@ -2,15 +2,19 @@ body{
     background-color: hsl(222,26%,31%) ;
    
 }
-.calculator{
-  padding: 0%;
+h3{
+    color: White;
+    margin: 0 auto;
+    width: 300px;
+    text-align: left;
+    padding: 1rem;
 }
 .Keypad{
     background-color: hsl(223,31%,20%);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
-    margin: 0  auto;
+    margin: 0 auto;
     width: 300px;
     margin-top: 1rem;
     padding: 1rem;
@@ -45,9 +49,9 @@ button{
     box-shadow: hsl(28,16%,65%);
     color: hsl(221,14%,31%);
     border-radius: 15%;
-    font-size: large;
-    font-weight: bolder;
-    
+    font-size: larger;
+    font-weight:bolder;
+    height: 3rem;
   }
 .display{
     
