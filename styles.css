@@ -15,14 +15,26 @@ body{
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
+    
 }
+
+
+
 .Equal{
     background-color: hsl(6,63%,50%);
     box-shadow: hsl(6,70%,34%);
     color: hsl(0,0%,100%);
+    grid-column: span 2;
     
 }
-.Backspace, .Clear {
+.Clear {
+    grid-column: span 2;
+    background-color: hsl(225,28%,49%);  
+    box-shadow: hsl(224,28%,35%);
+    color: hsl(0,0%,100%);
+    
+}
+.Backspace {
     background-color: hsl(225,28%,49%);  
     box-shadow: hsl(224,28%,35%);
     color: hsl(0,0%,100%);
