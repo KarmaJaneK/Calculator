@@ -1,69 +1,181 @@
-body{
-    background-color: hsl(222,26%,31%) ;
-   
+:root {
+  --mainBackground: hsl(222, 26%, 31%);
+  --keypadBackground: hsl(223, 31%, 20%);
+  --screenBackground: hsl(224, 36%, 15%);
+
+  --undoDelBackground: hsl(225, 21%, 49%);
+  --undoDelShadow: hsl(224, 28%, 35%);
+
+  --equalBackground: hsl(6, 63%, 50%);
+  --equalShadow: hsl(6, 70%, 34%);
+
+  --keyBackground: hsl(30, 25%, 89%);
+  --keyShadow: hsl(28, 16%, 65%);
+
+  --keyTextColor: hsl(221, 14%, 31%);
+ --displayTextColor: hsl(0, 0%, 100%);
+  --otherKeyTextColor: hsl(0, 0%, 100%);
+  
+  --headerColor: hsl(0, 0%, 100%);
 }
-h3{
-    color: White;
-    margin: 0 auto;
-    width: 300px;
-    text-align: left;
-    padding: 1rem;
-}
-.Keypad{
-    background-color: hsl(223,31%,20%);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-    margin: 0 auto;
-    width: 300px;
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    
+.theme1 {
+  --mainBackground: hsl(222, 26%, 31%);
+  --keypadBackground: hsl(223, 31%, 20%);
+  --screenBackground: hsl(224, 36%, 15%);
+
+  --undoDelBackground: hsl(225, 21%, 49%);
+  --undoDelShadow: hsl(224, 28%, 35%);
+
+  --equalBackground: hsl(6, 63%, 50%);
+  --equalShadow: hsl(6, 70%, 34%);
+
+  --keyBackground: hsl(30, 25%, 89%);
+  --keyShadow: hsl(28, 16%, 65%);
+
+  --keyTextColor: hsl(221, 14%, 31%);
+  --otherKeyTextColor: hsl(0, 0%, 100%);
+  --displayTextColor:hsl(0, 0%, 100%);
+  --headerColor: hsl(0, 0%, 100%);
 }
 
+.theme2 {
+  --mainBackground: hsl(0, 0%, 90%);
+  --keypadBackground: hsl(0, 5%, 81%);
+  --screenBackground: hsl(0, 5%, 81%);
 
+  --undoDelBackground: hsl(185, 42%, 37%);
+  --undoDelShadow: hsl(185, 58%, 25%);
 
-.Equal{
-    background-color: hsl(6,63%,50%);
-    box-shadow: hsl(6,70%,34%);
-    color: hsl(0,0%,100%);
-    grid-column: span 2;
-    
+  --equalBackground: hsl(25, 98%, 40%);
+  --equalShadow: hsl(25, 99%, 27%);
+
+  --keyBackground: hsl(45, 7%, 89%);
+  --keyShadow: hsl(35, 11%, 61%);
+
+  --keyTextColor: hsl(60, 10%, 19%);
+  --otherKeyTextColor: hsl(0, 0%, 100%);
+  --displayTextColor: hsl(60, 10%, 19%);
+  --headerColor: hsl(198, 20%, 13%)
+}
+
+.theme3 {
+  --mainBackground: hsl(268, 75%, 9%);
+  --keypadBackground: hsl(268, 71%, 12%);
+  --screenBackground: hsl(268, 71%, 12%);
+
+  --undoDelBackground: hsl(281, 89%, 26%);
+  --undoDelShadow: hsl(285, 91%, 52%);
+
+  --equalBackground: hsl(176, 100%, 44%);
+  --equalShadow: hsl(177, 92%, 70%);
+
+  --keyBackground: hsl(268, 47%, 21%);
+  --keyShadow: hsl(290, 70%, 36%);
+
+  --keyTextColor: hsl(52, 100%, 62%);
+  --otherKeyTextColor: hsl(0, 0%, 100%);
+  --displayTextColor: hsl(52, 100%, 62%);
+  --headerColor: hsl(52, 100%, 62%);
+}
+.calculator {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+  background-color: var(--mainBackground);
+}
+h3 {
+  color: var(--headerColor);
+  margin-bottom: 0;
+}
+.Keypad {
+font-size: larger;
+  background-color: var(--keypadBackground);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.Equal {
+  background-color: var(--equalBackground);
+  box-shadow: var(--equalShadow);
+  color: var(--otherKeyTextColor);
+  grid-column: span 2;
 }
 .Clear {
-    grid-column: span 2;
-    background-color: hsl(225,28%,49%);  
-    box-shadow: hsl(224,28%,35%);
-    color: hsl(0,0%,100%);
-    
+  grid-column: span 2;
+  background-color: var(--undoDelBackground);
+  box-shadow: var(--undoDelShadow);
+  color: var(--otherKeyTextColor);
 }
 .Backspace {
-    background-color: hsl(225,28%,49%);  
-    box-shadow: hsl(224,28%,35%);
-    color: hsl(0,0%,100%);
-    
+  background-color: var(--undoDelBackground);
+  box-shadow: var(--undoDelShadow);
+  color: var(--otherKeyTextColor);
 }
-button{
-    background-color: hsl(30,25%,89%);
-    box-shadow: hsl(28,16%,65%);
-    color: hsl(221,14%,31%);
-    border-radius: 15%;
-    font-size: larger;
-    font-weight:bolder;
-    height: 3rem;
-  }
-.display{
-    
-    background-color: hsl(224,36%,15%);
-    color: white;
-    font-size: 2rem;
-    padding: 1rem;
-    padding-top: 3rem;
-    text-align: right;
-    border-radius: 0.5rem;
-    margin: 0 auto;
-    width: 300px;
-    
+button {
+  background-color: var(--keyBackground);
+  box-shadow: var(--keyShadow);
+  color: var(--keyTextColor);
+  border-radius: 15%;
+  font-size: larger;
+  font-weight: bolder;
+  height: 3rem;
+}
+.display {
+  background-color: var(--screenBackground);
+  color: var(--displayTextColor);
+  font-size: 2rem;
+  padding: 1rem;
+  padding-top: 3rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  width: 300px;
+}
 
+.headerWrapper {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1rem;
 }
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  
+}
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.theme-option label {
+  color: var(--headerColor);
+    font-size: small;
+    
+}
+.themeLabel {
+    margin-top: 1.25rem;
+    margin-right: 0.5rem;;
+  color: var(--headerColor);
+font-weight: bold;
+  font-size: x-small;
+}
+

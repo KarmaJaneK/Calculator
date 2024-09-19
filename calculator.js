@@ -18,10 +18,11 @@ const multiply = function (a, b) {
 //divide
 
 const divide = function (a, b) {
-    if (b === 0) {
-        return "Error: Cannot Divide by O";}
-        else{
-  return a / b;}
+  if (b === 0) {
+    return "Error: Cannot Divide by O";
+  } else {
+    return a / b;
+  }
 };
 //store the first and second number and the operator
 
@@ -69,52 +70,58 @@ document.querySelectorAll("button").forEach((button) => {
         secondNumber += value; //if the operator is not empty, the value is the second number
         display(secondNumber);
       }
-    } else if (value === "C") {
+    } else if (value === "Reset") {
       //if the value is the clear button
       display(""); //clear the display
-    } else if ( //if the value is an operator
+    } else if (
+      //if the value is an operator
       value === "+" ||
       value === "-" ||
       value === "*" ||
       value === "/"
-    ) { if (operator === ""){
+    ) {
+      if (operator === "") {
         operator = value; //if the operator is empty, the value is the operator
-    } else if (operator !== "" && firstNumber !== "" && secondNumber !== "") {
+      } else if (operator !== "" && firstNumber !== "" && secondNumber !== "") {
         //if the operator is not empty and the first and second number are not empty, calculate the result
         display(operate(operator, firstNumber, secondNumber));
         firstNumber = displayValue; //store the result in the first number
         secondNumber = ""; //clear the second number
         operator = value; //store the new operator
-        } else {
-            operator = value; 
-        }};
-        
-    if (value === "Undo"){  //if the value is the backspace button
-        if (secondNumber !== "") {
-            secondNumber = secondNumber.slice(0, -1); //remove the last character from the second number
-            display(secondNumber); //update the display
-        } else if (operator !== "") {
-            operator = ""; //if the operator is not empty, clear the operator
-            display(firstNumber); //update the display
-        } else {
-            firstNumber = firstNumber.slice(0, -1); //remove the last character from the first number
-            display(firstNumber); //update the display
-        }};
+      } else {
+        operator = value;
+      }
+    }
 
-        if (value === ".") { //if the value is the decimal point
-            if (operator === "") {
-                if (!firstNumber.includes(".")) {
-                    firstNumber += "."; //if the operator is empty and the first number does not contain a decimal point, add a decimal point
-                    display(firstNumber); //update the display
-                }
-            } else {
-                if (!secondNumber.includes(".")) {
-                    secondNumber += "."; //if the operator is not empty and the second number does not contain a decimal point, add a decimal point
-                    display(secondNumber); //update the display
-                };
-            };
+    if (value === "Del") {
+      //if the value is the backspace button
+      if (secondNumber !== "") {
+        secondNumber = secondNumber.slice(0, -1); //remove the last character from the second number
+        display(secondNumber); //update the display
+      } else if (operator !== "") {
+        operator = ""; //if the operator is not empty, clear the operator
+        display(firstNumber); //update the display
+      } else {
+        firstNumber = firstNumber.slice(0, -1); //remove the last character from the first number
+        display(firstNumber); //update the display
+      }
+    }
 
-    } if (value === "=") {
+    if (value === ".") {
+      //if the value is the decimal point
+      if (operator === "") {
+        if (!firstNumber.includes(".")) {
+          firstNumber += "."; //if the operator is empty and the first number does not contain a decimal point, add a decimal point
+          display(firstNumber); //update the display
+        }
+      } else {
+        if (!secondNumber.includes(".")) {
+          secondNumber += "."; //if the operator is not empty and the second number does not contain a decimal point, add a decimal point
+          display(secondNumber); //update the display
+        }
+      }
+    }
+    if (value === "=") {
       //if the value is the equal button
 
       //if firstNumber is empty, display 0
@@ -128,11 +135,9 @@ document.querySelectorAll("button").forEach((button) => {
         //if second number and operator is empty, display the first number
       } else if (
         (secondNumber === "" ||
-        secondNumber === null ||
-        secondNumber === undefined) 
-        && (operator === "" ||
-        operator === null ||
-        operator === undefined)
+          secondNumber === null ||
+          secondNumber === undefined) &&
+        (operator === "" || operator === null || operator === undefined)
       ) {
         display(firstNumber);
 
@@ -142,12 +147,27 @@ document.querySelectorAll("button").forEach((button) => {
         secondNumber === null ||
         secondNumber === undefined
       ) {
-        document.querySelector(".display").innerText = firstNumber + operator; 
+        document.querySelector(".display").innerText = firstNumber + operator;
       } else {
         display(operate(operator, firstNumber, secondNumber)); //update the display with the result
       }
     }
   });
+
+  // Function to switch themes
+  function switchTheme(theme) {
+    document.body.className = theme;
+  }
+
+  // Add event listeners to radio buttons
+  document.querySelectorAll('input[name="theme"]').forEach((elem) => {
+    elem.addEventListener("change", function (event) {
+      switchTheme('theme' + event.target.value);
+    });
+  });
+
+  // Set default theme
+  switchTheme("theme1");
 });
 
 //add keyboard support
