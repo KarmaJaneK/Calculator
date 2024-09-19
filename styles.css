@@ -77,7 +77,6 @@
   --displayTextColor: hsl(52, 100%, 62%);
   --headerColor: hsl(52, 100%, 62%);
 }
-
 .calculator {
 
   display: flex;
@@ -88,6 +87,8 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
   background-color: var(--mainBackground);
 }
 h3 {

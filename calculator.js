@@ -70,7 +70,7 @@ document.querySelectorAll("button").forEach((button) => {
         secondNumber += value; //if the operator is not empty, the value is the second number
         display(secondNumber);
       }
-    } else if (value === "C") {
+    } else if (value === "Reset") {
       //if the value is the clear button
       display(""); //clear the display
     } else if (
@@ -93,7 +93,7 @@ document.querySelectorAll("button").forEach((button) => {
       }
     }
 
-    if (value === "Undo") {
+    if (value === "Del") {
       //if the value is the backspace button
       if (secondNumber !== "") {
         secondNumber = secondNumber.slice(0, -1); //remove the last character from the second number
