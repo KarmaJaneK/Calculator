@@ -68,16 +68,20 @@
   --keyTextColor: hsl(52, 100%, 62%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
 }
+.calculator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
 
 body {
   background-color: var(--mainBackground);
 }
 h3 {
   color: White;
-  margin: 0 auto;
-  width: 300px;
-  text-align: left;
-  padding: 1rem;
+ 
 }
 .Keypad {
   background-color: var(--keypadBackground);
@@ -129,8 +133,21 @@ button {
   width: 300px;
 }
 
+.headerWrapper{
+    
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+    
+    
+    
+  }
+
 .theme-toggle{
     display: flex;
+    align-items: center;
     
 }
 .theme-option{
@@ -140,6 +157,8 @@ button {
 }
 
 .theme-option label {
-    margin-bottom: 0.5rem;
+
     color: white
   };
+
+ 
