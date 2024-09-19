@@ -33,7 +33,6 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/KarmaJaneK/Calculator
-
 - Live Site URL: 
 
 ### Built with
@@ -50,7 +49,7 @@ Users should be able to:
 ### Future Features
 Features I plan to Implement:
 - Keyboard Support
-- Costom 3-way toggle switch for themes
+- Custom 3-way toggle switch for themes
 
 ## Author
 
