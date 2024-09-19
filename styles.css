@@ -14,6 +14,8 @@
 
   --keyTextColor: hsl(221, 14%, 31%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
+  
+  --headerColor: hsl(0, 0%, 100%);
 }
 .theme1 {
   --mainBackground: hsl(222, 26%, 31%);
@@ -31,12 +33,14 @@
 
   --keyTextColor: hsl(221, 14%, 31%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
+
+  --headerColor: hsl(0, 0%, 100%);
 }
 
 .theme2 {
   --mainBackground: hsl(0, 0%, 90%);
   --keypadBackground: hsl(0, 5%, 81%);
-  --screenBackground: hsl(0, 0%, 93%);
+  --screenBackground: hsl(0, 5%, 81%);
 
   --undoDelBackground: hsl(185, 42%, 37%);
   --undoDelShadow: hsl(185, 58%, 25%);
@@ -49,6 +53,8 @@
 
   --keyTextColor: hsl(60, 10%, 19%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
+
+  --headerColor: hsl(198, 20%, 13%)
 }
 
 .theme3 {
@@ -67,6 +73,8 @@
 
   --keyTextColor: hsl(52, 100%, 62%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
+
+  --headerColor: hsl(52, 100%, 62%);
 }
 .calculator {
   display: flex;
@@ -80,7 +88,7 @@ body {
   background-color: var(--mainBackground);
 }
 h3 {
-  color: White;
+  color: var(--headerColor);
 }
 .Keypad {
   background-color: var(--keypadBackground);
@@ -151,5 +159,5 @@ button {
 }
 
 .theme-option label {
-  color: white;
+  color: var(--headerColor);
 }
