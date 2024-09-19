@@ -13,6 +13,7 @@
   --keyShadow: hsl(28, 16%, 65%);
 
   --keyTextColor: hsl(221, 14%, 31%);
+ --displayTextColor: hsl(0, 0%, 100%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
   
   --headerColor: hsl(0, 0%, 100%);
@@ -33,7 +34,7 @@
 
   --keyTextColor: hsl(221, 14%, 31%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
-
+  --displayTextColor:hsl(0, 0%, 100%);
   --headerColor: hsl(0, 0%, 100%);
 }
 
@@ -53,7 +54,7 @@
 
   --keyTextColor: hsl(60, 10%, 19%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
-
+  --displayTextColor: hsl(60, 10%, 19%);
   --headerColor: hsl(198, 20%, 13%)
 }
 
@@ -73,7 +74,7 @@
 
   --keyTextColor: hsl(52, 100%, 62%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
-
+  --displayTextColor: hsl(52, 100%, 62%);
   --headerColor: hsl(52, 100%, 62%);
 }
 
@@ -134,7 +135,7 @@ button {
 }
 .display {
   background-color: var(--screenBackground);
-  color: var(--KeyTextColor);
+  color: var(--displayTextColor);
   font-size: 2rem;
   padding: 1rem;
   padding-top: 3rem;
