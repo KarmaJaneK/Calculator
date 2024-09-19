@@ -68,12 +68,12 @@
   --keyTextColor: hsl(52, 100%, 62%);
   --otherKeyTextColor: hsl(0, 0%, 100%);
 }
-.calculator{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
 }
 
 body {
@@ -81,7 +81,6 @@ body {
 }
 h3 {
   color: White;
- 
 }
 .Keypad {
   background-color: var(--keypadBackground);
@@ -133,32 +132,24 @@ button {
   width: 300px;
 }
 
-.headerWrapper{
-    
-    display: flex;
-    width: 300px;
-    justify-content: space-between;
-    flex-direction: row;
-    margin: 0 auto;
-    
-    
-    
-  }
-
-.theme-toggle{
-    display: flex;
-    align-items: center;
-    
+.headerWrapper {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 auto;
 }
-.theme-option{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .theme-option label {
-
-    color: white
-  };
-
- 
+  color: white;
+}
