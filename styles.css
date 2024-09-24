@@ -184,6 +184,6 @@ font-weight: bold;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  color: var (--headerColor);
+  color: var(--headerColor);
   font-weight: bolder;
 }
