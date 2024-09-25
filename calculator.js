@@ -42,10 +42,10 @@ const operate = function (operator, a, b) {
       return Math.round(subtract(a, b) * 100) / 100;
 
     case "*":
-      return Math.round(multiply(a, b) * 100) / 100;
+      return multiply(a, b);
 
     case "/":
-      return Math.round(divide(a, b) * 100) / 100;
+      return divide(a, b);
   }
 };
 
