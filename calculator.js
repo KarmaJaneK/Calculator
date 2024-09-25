@@ -34,6 +34,7 @@ let secondNumber = "";
 const operate = function (operator, a, b) {
   a = Number(a);
   b = Number(b); //convert the strings to numbers
+
   switch (operator) {
     case "+":
       return Math.round(sum(a, b) * 100) / 100; //round the result to 2 decimal places
@@ -41,7 +42,7 @@ const operate = function (operator, a, b) {
     case "-":
       return Math.round(subtract(a, b) * 100) / 100;
 
-    case "*":
+    case "x":
       return multiply(a, b);
 
     case "/":
