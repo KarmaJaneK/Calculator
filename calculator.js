@@ -77,7 +77,7 @@ document.querySelectorAll("button").forEach((button) => {
       //if the value is an operator
       value === "+" ||
       value === "-" ||
-      value === "*" ||
+      value === "x" ||
       value === "/"
     ) {
       if (operator === "") {
