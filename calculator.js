@@ -74,6 +74,10 @@ document.querySelectorAll("button").forEach((button) => {
     } else if (value === "Reset") {
       //if the value is the clear button
       display(""); //clear the display
+      firstNumber = ""; //clear the first number
+      operator = ""; //clear the operator
+      secondNumber = ""; //clear the second number
+      
     } else if (
       //if the value is an operator
       value === "+" ||
