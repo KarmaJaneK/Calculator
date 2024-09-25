@@ -22,7 +22,6 @@ Users should be able to:
 - See the size of the elements adjust based on their device's screen size
 - Perform mathmatical operations like addition, subtraction, multiplication, and division
 - Adjust the color theme based on their preference
-- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
 ### Screenshot
 ![image](https://github.com/user-attachments/assets/1d093638-29a5-4347-b3f1-65abcb10cbfe)
@@ -33,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/KarmaJaneK/Calculator
-- Live Site URL: 
+- Live Site URL: https://karmajanek.github.io/Calculator/
 
 ### Built with
 
