@@ -94,7 +94,7 @@ body {
   min-height: 100vh;
   background-color: var(--mainBackground);
 }
-h3 {
+h1 {
   color: var(--headerColor);
   margin-bottom: 0;
 }
